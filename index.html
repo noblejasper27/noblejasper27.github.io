@@ -1,0 +1,1701 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>迅剧吧_原创视频平台,值得信赖的高品质影像社区</title>
+<meta name="description" content="迅剧吧官方网站，深耕原创影像与剧集内容的视频品牌平台，为创作者与企业搭建高品质内容生态，汇聚真实故事、精品内容与多元创作者社区。">
+<meta name="keywords" content="迅剧吧,原创视频,影像社区,创作者平台,品牌故事">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2340'/%3E%3Cpath d='M25 20 L47 32 L25 44 Z' fill='%23ff6a3d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --xj-ink:#161a26;
+  --xj-ink-soft:#3a4055;
+  --xj-navy:#1b2340;
+  --xj-accent:#ff6a3d;
+  --xj-accent-soft:#ffe9e1;
+  --xj-teal:#1f8f8a;
+  --xj-teal-soft:#e2f3f2;
+  --xj-bg:#f6f7fa;
+  --xj-card:#ffffff;
+  --xj-line:#e3e6ee;
+  --xj-mute:#6b7285;
+  --xj-radius:16px;
+  --xj-shadow:0 10px 30px rgba(22,26,38,.08);
+  --xj-shadow-sm:0 4px 14px rgba(22,26,38,.07);
+  --xj-sticky:104px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--xj-bg);
+  color:var(--xj-ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul,ol{margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4,p{margin:0;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+
+/* ===== 吸顶头部 ===== */
+.xjb-top-wrap{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  box-shadow:0 2px 18px rgba(22,26,38,.07);
+}
+.xjb-announce{
+  background:linear-gradient(90deg,var(--xj-navy),#2b3a6b);
+  color:#e9ecf6;
+  font-size:.82rem;
+  letter-spacing:.3px;
+}
+.xjb-announce-inner{
+  max-width:1200px;margin:0 auto;padding:8px 20px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.xjb-announce-tag{
+  background:var(--xj-accent);color:#fff;font-weight:700;
+  padding:1px 9px;border-radius:20px;font-size:.74rem;flex:none;
+}
+.xjb-announce-more{margin-left:auto;color:#ffb59d;font-weight:600;white-space:nowrap;}
+.xjb-announce-more:hover{text-decoration:underline;}
+
+.xjb-header{max-width:1200px;margin:0 auto;padding:0 20px;}
+.xjb-header-inner{display:flex;align-items:center;gap:22px;height:72px;}
+.xjb-logo{display:flex;align-items:center;gap:10px;flex:none;}
+.xjb-logo-mark{
+  width:40px;height:40px;border-radius:12px;background:var(--xj-navy);
+  display:grid;place-items:center;flex:none;box-shadow:0 6px 16px rgba(27,35,64,.28);
+}
+.xjb-logo-name{font-weight:800;font-size:1.22rem;letter-spacing:.5px;}
+.xjb-logo-sub{font-size:.68rem;color:var(--xj-mute);letter-spacing:2px;display:block;margin-top:-4px;}
+.xjb-nav{display:flex;gap:4px;flex-wrap:wrap;}
+.xjb-nav-link{
+  padding:8px 13px;border-radius:10px;font-size:.94rem;color:var(--xj-ink-soft);
+  font-weight:500;transition:background .2s,color .2s;white-space:nowrap;
+}
+.xjb-nav-link:hover{background:#eef0f7;color:var(--xj-navy);}
+.xjb-header-tools{margin-left:auto;display:flex;align-items:center;gap:12px;}
+.xjb-search{
+  display:flex;align-items:center;gap:6px;background:#eef0f7;border-radius:12px;
+  padding:7px 12px;border:1px solid transparent;transition:border .2s,background .2s;
+  width:230px;
+}
+.xjb-search:focus-within{border-color:var(--xj-accent);background:#fff;box-shadow:0 0 0 4px var(--xj-accent-soft);}
+.xjb-search input{border:none;background:none;outline:none;font-size:.9rem;width:100%;color:var(--xj-ink);}
+.xjb-search input::placeholder{color:#9aa1b3;}
+.xjb-search-btn{color:var(--xj-accent);display:grid;place-items:center;flex:none;}
+.xjb-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border-radius:12px;padding:10px 18px;font-weight:600;font-size:.92rem;
+  transition:transform .18s,box-shadow .18s,background .18s,color .18s;
+  white-space:nowrap;
+}
+.xjb-btn:hover{transform:translateY(-2px);}
+.xjb-btn-primary{background:var(--xj-accent);color:#fff;box-shadow:0 8px 20px rgba(255,106,61,.32);}
+.xjb-btn-primary:hover{box-shadow:0 12px 26px rgba(255,106,61,.4);}
+.xjb-btn-ghost{background:#fff;color:var(--xj-navy);border:1.5px solid var(--xj-line);}
+.xjb-btn-ghost:hover{border-color:var(--xj-navy);}
+.xjb-btn-dark{background:var(--xj-navy);color:#fff;}
+.xjb-burger{display:none;width:44px;height:44px;border-radius:12px;background:#eef0f7;place-items:center;}
+.xjb-burger span{display:block;width:20px;height:2px;background:var(--xj-navy);border-radius:2px;position:relative;}
+.xjb-burger span::before,.xjb-burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--xj-navy);border-radius:2px;}
+.xjb-burger span::before{top:-6px;}
+.xjb-burger span::after{top:6px;}
+
+/* ===== 通用容器 ===== */
+.xjb-container{max-width:1200px;margin:0 auto;padding:0 20px;}
+.xjb-section{padding:64px 0;scroll-margin-top:var(--xj-sticky);}
+.xjb-section-alt{background:#fff;}
+.xjb-section-deep{background:var(--xj-navy);color:#e8ebf5;}
+.xjb-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;
+  letter-spacing:2px;color:var(--xj-accent);text-transform:uppercase;margin-bottom:12px;
+}
+.xjb-eyebrow::before{content:"";width:22px;height:2px;background:var(--xj-accent);border-radius:2px;}
+.xjb-h2{font-size:clamp(1.5rem,2.6vw,2.05rem);font-weight:800;letter-spacing:.5px;line-height:1.35;}
+.xjb-section-head{max-width:760px;margin-bottom:36px;}
+.xjb-section-head p{margin-top:12px;color:var(--xj-mute);font-size:.98rem;}
+.xjb-deep .xjb-section-head p,.xjb-section-deep .xjb-section-head p{color:#a9b3cc;}
+
+/* ===== 首屏 ===== */
+.xjb-hero{
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(255,106,61,.16),transparent 62%),
+    radial-gradient(720px 400px at 6% 110%,rgba(31,143,138,.16),transparent 60%),
+    #f2f4f9;
+  padding:56px 0 66px;scroll-margin-top:var(--xj-sticky);
+}
+.xjb-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;}
+.xjb-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--xj-line);
+  padding:6px 14px;border-radius:30px;font-size:.8rem;font-weight:600;color:var(--xj-teal);
+  box-shadow:var(--xj-shadow-sm);margin-bottom:20px;
+}
+.xjb-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--xj-teal);display:inline-block;animation:xjb-pulse 2s infinite;}
+@keyframes xjb-pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+.xjb-hero h1{
+  font-size:clamp(2.5rem,5.4vw,3.9rem);font-weight:900;line-height:1.12;letter-spacing:2px;
+  background:linear-gradient(120deg,var(--xj-navy) 30%,#3b4a85 70%,var(--xj-accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.xjb-hero-slogan{
+  font-size:clamp(1.02rem,1.7vw,1.24rem);font-weight:700;color:var(--xj-ink-soft);
+  margin-top:14px;letter-spacing:.6px;
+}
+.xjb-hero-desc{margin-top:18px;color:var(--xj-mute);font-size:.97rem;max-width:560px;}
+.xjb-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+.xjb-hero-stats{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;}
+.xjb-stat-num{font-size:1.7rem;font-weight:900;color:var(--xj-navy);letter-spacing:.5px;}
+.xjb-stat-num small{font-size:.85rem;color:var(--xj-accent);font-weight:700;margin-left:2px;}
+.xjb-stat-label{font-size:.8rem;color:var(--xj-mute);margin-top:-4px;}
+.xjb-hero-visual{position:relative;}
+.xjb-hero-main{
+  border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(22,26,38,.2);
+  border:6px solid #fff;transform:rotate(-1.2deg);transition:transform .3s;
+}
+.xjb-hero-main:hover{transform:rotate(0) scale(1.01);}
+.xjb-hero-float{
+  position:absolute;bottom:-20px;left:-14px;background:#fff;border-radius:16px;
+  padding:12px 16px;box-shadow:var(--xj-shadow);display:flex;align-items:center;gap:11px;
+  border:1px solid var(--xj-line);
+}
+.xjb-hero-float-num{font-weight:900;color:var(--xj-accent);font-size:1.15rem;}
+.xjb-hero-float-txt{font-size:.76rem;color:var(--xj-mute);line-height:1.4;}
+.xjb-hero-float2{
+  position:absolute;top:-16px;right:-8px;background:var(--xj-navy);color:#fff;
+  border-radius:14px;padding:9px 15px;font-size:.8rem;font-weight:600;box-shadow:var(--xj-shadow);
+}
+
+/* ===== 关键词解析 ===== */
+.xjb-about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:44px;align-items:start;}
+.xjb-about-aside{position:sticky;top:calc(var(--xj-sticky) + 16px);}
+.xjb-about-card{
+  background:#fff;border:1px solid var(--xj-line);border-radius:var(--xj-radius);
+  padding:22px;box-shadow:var(--xj-shadow-sm);
+}
+.xjb-about-card h3{font-size:1.02rem;font-weight:800;margin-bottom:10px;}
+.xjb-tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.xjb-tag{
+  font-size:.78rem;background:#eef0f7;color:var(--xj-ink-soft);padding:4px 11px;border-radius:20px;
+  font-weight:600;
+}
+.xjb-tag-accent{background:var(--xj-accent-soft);color:#c2410c;}
+.xjb-tag-teal{background:var(--xj-teal-soft);color:#12645f;}
+.xjb-prose p{margin-bottom:16px;color:var(--xj-ink-soft);font-size:.96rem;text-align:justify;}
+.xjb-prose p strong{color:var(--xj-navy);font-weight:700;}
+.xjb-prose h3{font-size:1.12rem;font-weight:800;margin:26px 0 10px;color:var(--xj-navy);}
+.xjb-prose h3:first-child{margin-top:0;}
+
+/* ===== 焦点视频 ===== */
+.xjb-focus-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;}
+.xjb-video-card{
+  background:#fff;border-radius:var(--xj-radius);overflow:hidden;border:1px solid var(--xj-line);
+  box-shadow:var(--xj-shadow-sm);transition:transform .25s,box-shadow .25s;
+  display:flex;flex-direction:column;
+}
+.xjb-video-card:hover{transform:translateY(-5px);box-shadow:var(--xj-shadow);}
+.xjb-cover{
+  position:relative;aspect-ratio:16/9;overflow:hidden;background:#dfe3ee;
+}
+.xjb-cover svg{width:100%;height:100%;display:block;transition:transform .5s;}
+.xjb-video-card:hover .xjb-cover svg{transform:scale(1.05);}
+.xjb-cover-label{
+  position:absolute;top:12px;left:12px;background:rgba(27,35,64,.82);color:#fff;
+  font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.5px;
+  backdrop-filter:blur(4px);
+}
+.xjb-play{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.xjb-play i{
+  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.9);
+  display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s;
+}
+.xjb-video-card:hover .xjb-play i{transform:scale(1.12);}
+.xjb-play i::after{
+  content:"";display:block;width:0;height:0;border-left:16px solid var(--xj-accent);
+  border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px;
+}
+.xjb-cover-dur{
+  position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.72);color:#fff;
+  font-size:.7rem;padding:2px 8px;border-radius:6px;font-weight:600;
+}
+.xjb-video-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;}
+.xjb-video-title{font-size:1.02rem;font-weight:800;line-height:1.45;margin-bottom:8px;}
+.xjb-video-card-lg .xjb-video-title{font-size:1.22rem;}
+.xjb-video-summary{font-size:.86rem;color:var(--xj-mute);line-height:1.65;margin-bottom:12px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.xjb-video-meta{
+  display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--xj-mute);margin-top:auto;
+}
+.xjb-ava{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:.72rem;font-weight:800;color:#fff;flex:none;
+}
+.xjb-video-foot{
+  display:flex;align-items:center;gap:14px;margin-top:14px;padding-top:12px;
+  border-top:1px dashed var(--xj-line);font-size:.78rem;color:var(--xj-mute);
+}
+.xjb-act{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;color:var(--xj-mute);
+  font-weight:600;padding:4px 8px;border-radius:8px;transition:background .18s,color .18s;}
+.xjb-act:hover{background:#eef0f7;color:var(--xj-navy);}
+.xjb-act.is-liked{color:var(--xj-accent);}
+.xjb-act.is-saved{color:var(--xj-teal);}
+.xjb-act svg{width:15px;height:15px;}
+
+/* ===== 热门视频流 ===== */
+.xjb-stream{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.xjb-filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.xjb-filter{
+  padding:7px 16px;border-radius:30px;background:#fff;border:1px solid var(--xj-line);
+  font-size:.85rem;font-weight:600;color:var(--xj-ink-soft);transition:all .18s;
+}
+.xjb-filter:hover{border-color:var(--xj-navy);}
+.xjb-filter.is-active{background:var(--xj-navy);color:#fff;border-color:var(--xj-navy);}
+.xjb-no-result{
+  display:none;padding:40px;text-align:center;color:var(--xj-mute);background:#fff;
+  border-radius:var(--xj-radius);border:1px dashed var(--xj-line);grid-column:1/-1;
+}
+
+/* ===== 创作者矩阵 ===== */
+.xjb-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.xjb-creator{
+  background:#fff;border:1px solid var(--xj-line);border-radius:var(--xj-radius);
+  padding:22px;box-shadow:var(--xj-shadow-sm);transition:transform .22s,box-shadow .22s;
+  display:flex;flex-direction:column;
+}
+.xjb-creator:hover{transform:translateY(-5px);box-shadow:var(--xj-shadow);}
+.xjb-creator-top{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.xjb-ava-lg{
+  width:56px;height:56px;border-radius:18px;display:grid;place-items:center;
+  font-size:1.2rem;font-weight:900;color:#fff;flex:none;
+}
+.xjb-creator-name{font-size:1.05rem;font-weight:800;}
+.xjb-creator-field{font-size:.78rem;color:var(--xj-teal);font-weight:700;margin-top:2px;}
+.xjb-creator-bio{font-size:.85rem;color:var(--xj-mute);line-height:1.65;margin-bottom:14px;flex:1;}
+.xjb-creator-stats{display:flex;gap:18px;font-size:.78rem;color:var(--xj-mute);margin-bottom:14px;}
+.xjb-creator-stats b{display:block;color:var(--xj-navy);font-size:.98rem;font-weight:800;}
+.xjb-creator-btn{
+  width:100%;padding:9px;border-radius:10px;background:#eef0f7;font-weight:700;
+  font-size:.84rem;color:var(--xj-navy);transition:background .18s,color .18s;
+}
+.xjb-creator-btn:hover{background:var(--xj-navy);color:#fff;}
+
+/* ===== 专题企划 ===== */
+.xjb-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.xjb-topic{
+  position:relative;border-radius:var(--xj-radius);overflow:hidden;min-height:250px;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;
+  transition:transform .22s;
+}
+.xjb-topic:hover{transform:translateY(-5px);}
+.xjb-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,0) 30%,rgba(10,14,26,.82));z-index:1;}
+.xjb-topic-bg{position:absolute;inset:0;}
+.xjb-topic-bg svg{width:100%;height:100%;}
+.xjb-topic > *{position:relative;z-index:2;}
+.xjb-topic-status{
+  align-self:flex-start;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);
+  font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:auto;
+  border:1px solid rgba(255,255,255,.3);
+}
+.xjb-topic-title{font-size:1.02rem;font-weight:800;line-height:1.4;margin-bottom:6px;}
+.xjb-topic-desc{font-size:.78rem;color:rgba(255,255,255,.82);line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+
+/* ===== 故事随笔 ===== */
+.xjb-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.xjb-story{
+  background:#fff;border-radius:var(--xj-radius);padding:24px;border:1px solid var(--xj-line);
+  box-shadow:var(--xj-shadow-sm);border-top:4px solid var(--xj-accent);
+}
+.xjb-story:nth-child(2){border-top-color:var(--xj-teal);}
+.xjb-story:nth-child(3){border-top-color:#7c6cf0;}
+.xjb-story h3{font-size:1.05rem;font-weight:800;margin-bottom:10px;line-height:1.45;}
+.xjb-story p{font-size:.87rem;color:var(--xj-mute);line-height:1.75;}
+.xjb-story-author{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.78rem;color:var(--xj-ink-soft);font-weight:600;}
+
+/* ===== 用户评价 ===== */
+.xjb-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.xjb-review{
+  background:var(--xj-section-deep) ;
+}
+.xjb-section-deep .xjb-review{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:var(--xj-radius);
+  padding:22px;color:#dfe4f0;
+}
+.xjb-review-stars{color:#ffb03a;font-size:.82rem;letter-spacing:2px;margin-bottom:10px;}
+.xjb-review-text{font-size:.88rem;line-height:1.75;color:#cfd6e8;margin-bottom:16px;}
+.xjb-review-user{display:flex;align-items:center;gap:10px;font-size:.8rem;color:#9fa9c4;}
+.xjb-review-user b{color:#fff;font-size:.85rem;}
+
+/* ===== FAQ ===== */
+.xjb-faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.xjb-faq-item{
+  background:#fff;border:1px solid var(--xj-line);border-radius:14px;overflow:hidden;
+  transition:box-shadow .2s;
+}
+.xjb-faq-item[open]{box-shadow:var(--xj-shadow-sm);border-color:#c9cfdf;}
+.xjb-faq-item summary{
+  list-style:none;cursor:pointer;padding:17px 22px;font-weight:700;font-size:.95rem;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.xjb-faq-item summary::-webkit-details-marker{display:none;}
+.xjb-faq-item summary::after{
+  content:"+";font-size:1.3rem;color:var(--xj-accent);font-weight:400;line-height:1;flex:none;
+  transition:transform .2s;
+}
+.xjb-faq-item[open] summary::after{transform:rotate(45deg);}
+.xjb-faq-body{padding:0 22px 18px;font-size:.89rem;color:var(--xj-mute);line-height:1.75;}
+
+/* ===== 联系/投稿 ===== */
+.xjb-cta{
+  background:linear-gradient(120deg,var(--xj-navy),#2c3a6d 60%,#3d2a3f);
+  border-radius:24px;padding:48px;color:#fff;display:grid;grid-template-columns:1.3fr 1fr;
+  gap:36px;align-items:center;position:relative;overflow:hidden;
+}
+.xjb-cta::before{
+  content:"";position:absolute;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,106,61,.4),transparent 70%);
+  top:-140px;right:-80px;
+}
+.xjb-cta h2{font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:900;line-height:1.35;position:relative;}
+.xjb-cta p{color:#c3cadd;font-size:.92rem;margin-top:12px;position:relative;}
+.xjb-cta-actions{display:flex;flex-direction:column;gap:12px;position:relative;}
+.xjb-cta-input{
+  display:flex;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:12px;padding:6px 6px 6px 16px;align-items:center;gap:8px;
+}
+.xjb-cta-input input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:.9rem;}
+.xjb-cta-input input::placeholder{color:#98a2bd;}
+
+/* ===== 页脚 ===== */
+.xjb-footer{background:#11162a;color:#9aa4bf;padding:56px 0 28px;font-size:.86rem;}
+.xjb-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:38px;}
+.xjb-footer h4{color:#fff;font-size:.92rem;font-weight:700;margin-bottom:14px;letter-spacing:.5px;}
+.xjb-footer li{margin-bottom:9px;}
+.xjb-footer a:hover{color:#fff;}
+.xjb-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.xjb-footer-brand .xjb-logo-name{color:#fff;}
+.xjb-footer-desc{line-height:1.8;max-width:320px;color:#8b96b4;}
+.xjb-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;color:#6f7a97;font-size:.79rem;
+}
+
+/* ===== Toast/弹窗 ===== */
+.xjb-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,24px);opacity:0;
+  background:var(--xj-navy);color:#fff;padding:12px 22px;border-radius:12px;font-size:.87rem;
+  box-shadow:0 12px 32px rgba(0,0,0,.28);pointer-events:none;transition:all .28s;z-index:200;
+  font-weight:600;
+}
+.xjb-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.xjb-modal-mask{
+  position:fixed;inset:0;background:rgba(12,16,28,.62);backdrop-filter:blur(4px);
+  display:none;place-items:center;z-index:150;padding:20px;
+}
+.xjb-modal-mask.is-show{display:grid;}
+.xjb-modal{
+  background:#fff;border-radius:20px;max-width:460px;width:100%;padding:28px;
+  box-shadow:0 30px 70px rgba(0,0,0,.35);animation:xjb-pop .25s ease;
+  max-height:86vh;overflow:auto;
+}
+@keyframes xjb-pop{from{opacity:0;transform:translateY(18px) scale(.97);}to{opacity:1;transform:none;}}
+.xjb-modal h3{font-size:1.2rem;font-weight:800;margin-bottom:6px;}
+.xjb-modal-sub{font-size:.83rem;color:var(--xj-mute);margin-bottom:18px;}
+.xjb-form-field{margin-bottom:14px;}
+.xjb-form-field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;color:var(--xj-ink-soft);}
+.xjb-form-field input,.xjb-form-field textarea{
+  width:100%;border:1px solid var(--xj-line);border-radius:10px;padding:10px 13px;
+  font-size:.89rem;outline:none;font-family:inherit;transition:border .18s,box-shadow .18s;
+  background:#fafbfd;color:var(--xj-ink);
+}
+.xjb-form-field input:focus,.xjb-form-field textarea:focus{border-color:var(--xj-accent);box-shadow:0 0 0 3px var(--xj-accent-soft);background:#fff;}
+.xjb-modal-actions{display:flex;gap:10px;margin-top:20px;}
+.xjb-modal-actions .xjb-btn{flex:1;}
+.xjb-modal-close{position:absolute;top:14px;right:16px;font-size:1.3rem;color:var(--xj-mute);}
+.xjb-modal-wrap{position:relative;}
+
+/* 回到顶部 */
+.xjb-top-btn{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:14px;
+  background:var(--xj-navy);color:#fff;display:grid;place-items:center;box-shadow:var(--xj-shadow);
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:all .25s;z-index:80;
+}
+.xjb-top-btn.is-show{opacity:1;visibility:visible;transform:none;}
+.xjb-top-btn:hover{background:var(--xj-accent);}
+
+/* 响应式 */
+@media(max-width:1024px){
+  .xjb-hero-grid{grid-template-columns:1fr;gap:36px;}
+  .xjb-hero-visual{max-width:560px;}
+  .xjb-about-grid{grid-template-columns:1fr;}
+  .xjb-about-aside{position:static;}
+  .xjb-focus-grid{grid-template-columns:1fr;}
+  .xjb-stream{grid-template-columns:repeat(2,1fr);}
+  .xjb-creator-grid{grid-template-columns:repeat(2,1fr);}
+  .xjb-topic-grid{grid-template-columns:repeat(2,1fr);}
+  .xjb-story-grid{grid-template-columns:1fr;}
+  .xjb-review-grid{grid-template-columns:repeat(2,1fr);}
+  .xjb-cta{grid-template-columns:1fr;padding:36px;}
+  .xjb-footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:760px){
+  .xjb-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;
+    flex-direction:column;padding:14px 20px 20px;box-shadow:0 16px 30px rgba(22,26,38,.12);
+    border-top:1px solid var(--xj-line);gap:4px;
+  }
+  .xjb-nav.is-open{display:flex;}
+  .xjb-burger{display:grid;}
+  .xjb-search{width:150px;}
+  .xjb-header-tools .xjb-btn{display:none;}
+  .xjb-stream,.xjb-creator-grid,.xjb-topic-grid,.xjb-review-grid{grid-template-columns:1fr;}
+  .xjb-hero{padding:38px 0 48px;}
+  .xjb-section{padding:46px 0;}
+  .xjb-hero-stats{gap:22px;}
+  .xjb-cta{padding:28px 22px;}
+  .xjb-footer-grid{grid-template-columns:1fr;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="xjb-top-wrap">
+  <div class="xjb-announce">
+    <div class="xjb-announce-inner">
+      <span class="xjb-announce-tag">官方发布</span>
+      <span>11月19日更新：秋冬影像企划《城市微光》第6集上线；创作者扶持计划第二期开放报名；新手指南与投稿规范同步升级。</span>
+      <a class="xjb-announce-more" href="#xjb-news">查看动态 →</a>
+    </div>
+  </div>
+
+  <header class="xjb-header">
+    <div class="xjb-header-inner">
+      <a class="xjb-logo" href="#xjb-home" aria-label="迅剧吧官方网站首页">
+        <span class="xjb-logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 5.5L19 12L7 18.5V5.5Z" fill="#ff6a3d"/></svg>
+        </span>
+        <span>
+          <span class="xjb-logo-name">迅剧吧</span>
+          <span class="xjb-logo-sub">XUNJUBA</span>
+        </span>
+      </a>
+
+      <nav class="xjb-nav" id="xjb-nav" aria-label="主导航">
+        <a class="xjb-nav-link" href="#xjb-home">首页</a>
+        <a class="xjb-nav-link" href="#xjb-about">品牌解析</a>
+        <a class="xjb-nav-link" href="#xjb-focus">焦点内容</a>
+        <a class="xjb-nav-link" href="#xjb-stream">影像流</a>
+        <a class="xjb-nav-link" href="#xjb-creators">创作者</a>
+        <a class="xjb-nav-link" href="#xjb-topics">专题企划</a>
+        <a class="xjb-nav-link" href="#xjb-news">企业动态</a>
+        <a class="xjb-nav-link" href="#xjb-faq">帮助</a>
+        <a class="xjb-nav-link" href="#xjb-contact">联系</a>
+      </nav>
+
+      <div class="xjb-header-tools">
+        <div class="xjb-search">
+          <input type="search" id="xjb-search-input" placeholder="搜索作品 / 创作者 / 话题" aria-label="站内搜索">
+          <button class="xjb-search-btn" id="xjb-search-btn" aria-label="执行搜索">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </div>
+        <button class="xjb-btn xjb-btn-primary" id="xjb-submit-top">我要投稿</button>
+        <button class="xjb-burger" id="xjb-burger" aria-label="展开导航" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="xjb-hero" id="xjb-home">
+    <div class="xjb-container">
+      <div class="xjb-hero-grid">
+        <div>
+          <span class="xjb-hero-badge"><i></i>迅剧吧官方网站 · 原创影像品牌</span>
+          <h1>迅剧吧</h1>
+          <p class="xjb-hero-slogan">让每一段真实故事，被认真对待地看见</p>
+          <p class="xjb-hero-desc">迅剧吧是一家持续运营的原创视频内容品牌与影像社区，专注剧集短片、人物纪实与生活观察。我们以专业制作与开放社区为基础，为创作者提供稳定的内容生态，为观众提供高品质、有温度的观看体验，让企业级内容标准与社区活力在同一条河流里生长。</p>
+          <div class="xjb-hero-actions">
+            <a class="xjb-btn xjb-btn-primary" href="#xjb-focus">探索焦点内容</a>
+            <a class="xjb-btn xjb-btn-ghost" href="#xjb-creators">认识创作者</a>
+            <button class="xjb-btn xjb-btn-ghost" id="xjb-share-btn">分享品牌页</button>
+          </div>
+          <div class="xjb-hero-stats">
+            <div>
+              <div class="xjb-stat-num" data-count="12800">12,800<small>+</small></div>
+              <div class="xjb-stat-label">原创作品累计上线</div>
+            </div>
+            <div>
+              <div class="xjb-stat-num" data-count="460">460<small>万</small></div>
+              <div class="xjb-stat-label">社区月活跃用户</div>
+            </div>
+            <div>
+              <div class="xjb-stat-num" data-count="216">216<small>位</small></div>
+              <div class="xjb-stat-label">签约与入驻创作者</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="xjb-hero-visual">
+          <div class="xjb-hero-main">
+            <svg viewBox="0 0 640 360" role="img" aria-label="迅剧吧品牌主视觉：夜色中的城市天台与摄影机剪影">
+              <defs>
+                <linearGradient id="xjbHeroSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1b2340"/><stop offset=".55" stop-color="#3a4472"/><stop offset="1" stop-color="#ff8a5c"/>
+                </linearGradient>
+                <linearGradient id="xjbHeroGlow" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ff6a3d" stop-opacity=".9"/><stop offset="1" stop-color="#ffd6a5" stop-opacity=".2"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#xjbHeroSky)"/>
+              <circle cx="500" cy="120" r="46" fill="#ffd9a8" opacity=".9"/>
+              <circle cx="500" cy="120" r="70" fill="url(#xjbHeroGlow)" opacity=".55"/>
+              <rect x="0" y="238" width="120" height="122" fill="#141a2e"/>
+              <rect x="128" y="204" width="86" height="156" fill="#1d2542"/>
+              <rect x="222" y="252" width="110" height="108" fill="#111728"/>
+              <rect x="340" y="220" width="92" height="140" fill="#1d2542"/>
+              <rect x="440" y="256" width="120" height="104" fill="#141a2e"/>
+              <rect x="568" y="230" width="72" height="130" fill="#1d2542"/>
+              <g fill="#ffe3b3" opacity=".82">
+                <rect x="20" y="256" width="9" height="12"/><rect x="40" y="256" width="9" height="12"/>
+                <rect x="60" y="282" width="9" height="12"/><rect x="146" y="224" width="9" height="12"/>
+                <rect x="170" y="250" width="9" height="12"/><rect x="196" y="224" width="9" height="12"/>
+                <rect x="244" y="272" width="9" height="12"/><rect x="272" y="298" width="9" height="12"/>
+                <rect x="356" y="240" width="9" height="12"/><rect x="384" y="266" width="9" height="12"/>
+                <rect x="462" y="276" width="9" height="12"/><rect x="492" y="300" width="9" height="12"/>
+                <rect x="586" y="250" width="9" height="12"/>
+              </g>
+              <path d="M0 292 Q160 262 320 292 T640 286 V360 H0Z" fill="#0d1220" opacity=".85"/>
+              <g transform="translate(250 250)">
+                <rect x="0" y="34" width="120" height="14" rx="7" fill="#0a0e1a"/>
+                <circle cx="34" cy="20" r="18" fill="#e8ecf6"/>
+                <circle cx="34" cy="20" r="9" fill="#1b2340"/>
+                <rect x="30" y="34" width="8" height="10" fill="#c9cfdf"/>
+                <path d="M70 12 L104 34 L104 6Z" fill="#ff6a3d"/>
+                <circle cx="104" cy="20" r="9" fill="#c9cfdf"/>
+              </g>
+            </svg>
+          </div>
+          <div class="xjb-hero-float2">本周新增 326 部原创</div>
+          <div class="xjb-hero-float">
+            <div class="xjb-hero-float-num">98.2%</div>
+            <div class="xjb-hero-float-txt">社区好评率<br>品质口碑持续运营</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌解析（长文） -->
+  <section class="xjb-section" id="xjb-about">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow">Brand Insight</span>
+        <h2 class="xjb-h2">迅剧吧是什么：一个以原创为底色的影像品牌官方网站</h2>
+        <p>从品牌定位、内容标准到社区机制，理解迅剧吧为何把“真实”与“专业”放在同一句话里。</p>
+      </div>
+
+      <div class="xjb-about-grid">
+        <aside class="xjb-about-aside">
+          <div class="xjb-about-card">
+            <h3>品牌关键词</h3>
+            <div class="xjb-tag-row">
+              <span class="xjb-tag xjb-tag-accent">原创影像</span>
+              <span class="xjb-tag xjb-tag-teal">剧集短片</span>
+              <span class="xjb-tag">人物纪实</span>
+              <span class="xjb-tag">城市观察</span>
+              <span class="xjb-tag">创作者社区</span>
+              <span class="xjb-tag">内容生态</span>
+            </div>
+            <div style="margin-top:18px;padding-top:16px;border-top:1px dashed var(--xj-line);">
+              <h3 style="font-size:.92rem;">成立与运营</h3>
+              <p style="font-size:.84rem;color:var(--xj-mute);margin-top:6px;line-height:1.7;">品牌创立于2019年，总部位于杭州，在北京、成都设有内容合作站点，团队以内容策划、影像制作与社区运营为核心，持续运营至今。</p>
+            </div>
+            <div style="margin-top:16px;">
+              <h3 style="font-size:.92rem;">内容标准</h3>
+              <p style="font-size:.84rem;color:var(--xj-mute);margin-top:6px;line-height:1.7;">全部内容经人工审核与画质校验，支持高清播放；原创与正版授权是迅剧吧的底线，也是品牌口碑的来源。</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="xjb-prose">
+          <h3>一、品牌定位：把剧集感带进真实生活</h3>
+          <p>迅剧吧并不是一个单纯的视频聚合页面，而是一家真正投入在内容生产链路上的<strong>原创视频品牌</strong>。我们把“剧”理解为叙事的方法，把“吧”理解为聚集的场所：前者代表专业、结构与打磨，后者代表社区、交流与温度。于是迅剧吧的每一部作品，都试图同时具备两种品质——经得起审美推敲的影像质感，以及能被普通人代入的真实情感。</p>
+          <p>作为迅剧吧官方网站，这个页面承载的并非一个临时活动，而是品牌长期经营的公开门面。我们在这里披露品牌理念、内容方向、创作者生态与合作方式，也把企业动态与官方发布同步给关心我们的伙伴。对一家视频品牌来说，官网不是装饰，而是承诺：我们愿意把标准写下来，把过程展示出来，把结果交给用户检验。</p>
+
+          <h3>二、关键词解析：为什么是“迅剧吧”</h3>
+          <p><strong>“迅”</strong>指向效率与敏锐。视频行业的变化速度很快，题材在变、观看习惯在变、创作工具也在变。迅剧吧希望自己始终对内容趋势保持敏感，用更短的制作周期、更快的选题反应，把当下正在发生的故事及时记录下来。我们内部把这种能力称为“迅度”——它不意味着粗糙，而是把专业流程做得更顺，让好内容更早抵达观众。</p>
+          <p><strong>“剧”</strong>指向叙事与品质。迅剧吧的核心内容形态是剧集化短片：有人物、有起承转合、有情绪落点。我们不走标题党式的快消路线，而是坚持完整叙事。一个六分钟的短片，也应该有清晰的动机、真实的对白与克制的镜头语言。这种坚持让迅剧吧在垂直领域内积累了专业口碑，也让品牌在行业观察者眼中具备辨识度。</p>
+          <p><strong>“吧”</strong>指向社区与归属。视频不该只是单向输出。迅剧吧搭建了创作者与观众之间的双向通道：创作者可以在社区里分享创作幕后、发起创意挑战、征集故事线索；观众可以投票、评论、收藏，甚至直接投稿参与下一部作品。我们希望“吧”是一个可以被反复回来的地方，而不是一次性的流量入口。</p>
+          <p>三字合在一起，构成了迅剧吧的产品逻辑：<strong>用敏锐的选题捕捉真实，用剧集的方法打磨内容，用社区的方式持续陪伴</strong>。这也是我们理解“品牌”二字的方式——品牌不是一句口号，而是无数次兑现承诺之后留下的信任。</p>
+
+          <h3>三、内容生态：从一部短片到一条链路</h3>
+          <p>迅剧吧的内容生态由四层构成。第一层是<strong>自制精品内容</strong>，由品牌内容团队主导，覆盖人物纪实、城市观察、生活实验与剧情短片，代表品牌最高制作水准。第二层是<strong>签约创作者计划</strong>，我们为有稳定输出能力的创作者提供策划支持、拍摄资源与分发保障，帮助他们把个人表达变成可持续的作品序列。第三层是<strong>社区投稿</strong>，任何用户都可以上传自己的影像作品，通过审核后进入社区展映，优秀作品会被推荐至焦点位。第四层是<strong>品牌合作内容</strong>，我们与不同领域的企业共同制作有信息量的影像，让商业表达也能保持体面与真实。</p>
+          <p>四层之间并非割裂。社区里的高赞选题会反向进入自制选题池，签约创作者会参与品牌合作项目，合作方也能在社区发起主题征集。这种流动让迅剧吧的内容生态保持活性，也让“原创”“正版”“高清”这些关键词不是贴在墙上的标语，而是贯穿生产与分发的实际标准。</p>
+
+          <h3>四、社区与创作者：让创作被看见，也让创作被尊重</h3>
+          <p>视频品牌的护城河，最终落在人身上。迅剧吧目前汇聚了216位签约与入驻创作者，他们中有纪录片方向的独立导演，有擅长生活记录的年轻博主，也有专注剧情短片的学生团队。我们为他们提供的不只是曝光位，还包括选题会、剪辑工作坊、拍摄设备共享与法务咨询。我们相信，只有创作者被认真对待，观众才能看到真正用心的内容。</p>
+          <p>社区的活力则来自更广泛的参与者。迅剧吧每月会发起一次主题创意挑战，围绕一个具体的生活切面征集作品，比如“凌晨四点的城市”“我家的旧物”“一次没有目的的散步”。挑战不设门槛，评审标准公开，获奖作品会进入专题企划并获得制作支持。这种机制让普通用户也能参与内容生产，让社区保持真实的呼吸感。</p>
+
+          <h3>五、品质与责任：一家视频品牌的长期主义</h3>
+          <p>作为持续运营的内容平台，迅剧吧始终把品质与责任放在一起讨论。品质意味着画质、声音、叙事与信息准确性的基本线；责任意味着对拍摄对象、对观众、对合作方都保持诚实。我们在内容审核上采取人工复核机制，对涉及真实人物与真实事件的作品尤其谨慎；我们在版权上坚持正版授权，尊重每一位创作者与权利方；我们在社区治理上保持透明，举报与反馈渠道长期开放。</p>
+          <p>这些工作并不总是显眼，但它们决定了一个品牌能走多远。迅剧吧希望成为用户首选的影像社区，也希望成为创作者值得信赖的长期伙伴。我们不追求短期的热闹，而追求每年都能拿出几部让人记住的作品、每年都能让一批新创作者被看见。这是我们对“官方网站”四个字的理解，也是迅剧吧愿意长期坚持的事。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="xjb-section xjb-section-alt" id="xjb-focus">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow">Focus</span>
+        <h2 class="xjb-h2">焦点内容 · 本周值得完整看完的影像</h2>
+        <p>由内容团队与社区编辑共同推荐，兼顾叙事完成度与现实观察价值。</p>
+      </div>
+
+      <div class="xjb-focus-grid">
+        <article class="xjb-video-card xjb-video-card-lg">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="焦点短片《凌晨四点的早餐铺》封面：清晨街道与暖黄灯光">
+              <defs><linearGradient id="xjbF1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#232a45"/><stop offset="1" stop-color="#7a5a48"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbF1)"/>
+              <circle cx="520" cy="86" r="34" fill="#ffd9a8" opacity=".8"/>
+              <rect x="0" y="230" width="640" height="130" fill="#1b2033"/>
+              <rect x="60" y="150" width="220" height="110" rx="8" fill="#2c3350"/>
+              <rect x="84" y="172" width="172" height="62" rx="4" fill="#ffb066" opacity=".85"/>
+              <rect x="340" y="176" width="180" height="84" rx="6" fill="#242b46"/>
+              <g fill="#ffcf8a">
+                <rect x="96" y="188" width="14" height="30"/><rect x="124" y="188" width="14" height="30"/>
+                <rect x="152" y="188" width="14" height="30"/>
+              </g>
+              <g fill="#0f1424">
+                <ellipse cx="260" cy="292" rx="42" ry="10"/><rect x="248" y="238" width="24" height="54" rx="10"/>
+                <circle cx="260" cy="228" r="16"/>
+              </g>
+              <g stroke="#ffd9a8" stroke-width="2" opacity=".55">
+                <path d="M410 176 V120"/><circle cx="410" cy="112" r="9" fill="#ffd9a8" stroke="none"/>
+              </g>
+            </svg>
+            <span class="xjb-cover-label">品牌自制</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">08:42</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">凌晨四点的早餐铺：一座城市最早醒来的地方</h3>
+            <p class="xjb-video-summary">我们跟随一位在巷口经营了十七年的早餐摊主，记录他从备料、开火到第一笼包子出笼的三个小时。镜头克制，但对白真实，呈现出城市运转最基础也最容易被忽略的一环。</p>
+            <div class="xjb-video-meta">
+              <span class="xjb-ava" style="background:#ff6a3d;">周</span>
+              <span>周记影像 · 人物纪实</span>
+            </div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="3126"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>3,126</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="凌晨四点的早餐铺">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <div style="display:grid;gap:20px;">
+          <article class="xjb-video-card">
+            <div class="xjb-cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="短片《旧物修理铺》封面：木桌上的工具与台灯">
+                <defs><linearGradient id="xjbF2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4b3a2f"/><stop offset="1" stop-color="#a97a4f"/></linearGradient></defs>
+                <rect width="640" height="360" fill="url(#xjbF2)"/>
+                <rect x="0" y="240" width="640" height="120" fill="#5c4433"/>
+                <rect x="70" y="120" width="220" height="120" rx="10" fill="#2f251f"/>
+                <circle cx="180" cy="140" r="26" fill="#ffcf8a" opacity=".9"/>
+                <path d="M150 240 L210 240 L200 200 L160 200Z" fill="#e0b17a"/>
+                <rect x="330" y="160" width="150" height="18" rx="6" fill="#c9a27a"/>
+                <circle cx="405" cy="210" r="30" fill="#d8b48c"/>
+                <g stroke="#f0d6b4" stroke-width="4">
+                  <path d="M540 120 v90"/><path d="M516 156 h48"/>
+                </g>
+              </svg>
+              <span class="xjb-cover-label">生活记录</span>
+              <span class="xjb-play"><i></i></span>
+              <span class="xjb-cover-dur">05:18</span>
+            </div>
+            <div class="xjb-video-body">
+              <h3 class="xjb-video-title">旧物修理铺：把坏掉的东西再留几年</h3>
+              <p class="xjb-video-summary">修一把椅子、换一段发条，老手艺人的日常耐性。</p>
+              <div class="xjb-video-meta">
+                <span class="xjb-ava" style="background:#1f8f8a;">林</span>
+                <span>林间手记</span>
+              </div>
+              <div class="xjb-video-foot">
+                <button class="xjb-act xjb-like" data-like="1842"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>1,842</span></button>
+                <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+                <button class="xjb-act xjb-comment" data-title="旧物修理铺">评论</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="xjb-video-card">
+            <div class="xjb-cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="剧情短片《夜班地铁》封面：隧道中的地铁车窗与灯光">
+                <defs><linearGradient id="xjbF3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#122531"/><stop offset="1" stop-color="#1f5568"/></linearGradient></defs>
+                <rect width="640" height="360" fill="url(#xjbF3)"/>
+                <rect x="40" y="70" width="560" height="220" rx="20" fill="#0b1822"/>
+                <rect x="70" y="96" width="180" height="130" rx="10" fill="#2f6b80"/>
+                <rect x="270" y="96" width="180" height="130" rx="10" fill="#2f6b80"/>
+                <rect x="470" y="96" width="100" height="130" rx="10" fill="#2f6b80"/>
+                <g fill="#e9f6fb" opacity=".7">
+                  <circle cx="160" cy="160" r="22"/><rect x="138" y="184" width="44" height="42" rx="6"/>
+                  <circle cx="360" cy="150" r="18"/><rect x="342" y="170" width="36" height="50" rx="6"/>
+                </g>
+                <rect x="0" y="300" width="640" height="60" fill="#081019"/>
+                <g stroke="#7fe3d8" stroke-width="3" opacity=".5"><path d="M20 300 H620"/></g>
+              </svg>
+              <span class="xjb-cover-label">剧情短片</span>
+              <span class="xjb-play"><i></i></span>
+              <span class="xjb-cover-dur">12:06</span>
+            </div>
+            <div class="xjb-video-body">
+              <h3 class="xjb-video-title">夜班地铁：末班车上遇到的四个陌生人</h3>
+              <p class="xjb-video-summary">四段并行的独白，拼出一个城市的深夜情绪。</p>
+              <div class="xjb-video-meta">
+                <span class="xjb-ava" style="background:#7c6cf0;">叙</span>
+                <span>叙事实验室</span>
+              </div>
+              <div class="xjb-video-foot">
+                <button class="xjb-act xjb-like" data-like="2470"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>2,470</span></button>
+                <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+                <button class="xjb-act xjb-comment" data-title="夜班地铁">评论</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像流 -->
+  <section class="xjb-section" id="xjb-stream">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow">Stream</span>
+        <h2 class="xjb-h2">影像流 · 社区正在发生的多元表达</h2>
+        <p>按题材筛选，看看不同创作者如何理解同一座城市、同一种生活。</p>
+      </div>
+
+      <div class="xjb-filter-row" role="tablist" aria-label="题材筛选">
+        <button class="xjb-filter is-active" data-filter="all">全部</button>
+        <button class="xjb-filter" data-filter="故事">故事短片</button>
+        <button class="xjb-filter" data-filter="纪实">人物纪实</button>
+        <button class="xjb-filter" data-filter="生活">生活方式</button>
+        <button class="xjb-filter" data-filter="城市">城市观察</button>
+        <button class="xjb-filter" data-filter="教程">教程干货</button>
+      </div>
+
+      <div class="xjb-stream" id="xjb-stream-grid">
+        <article class="xjb-video-card" data-tag="城市" data-keywords="城市观察 街角 便利店 深夜">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="作品《街角便利店》封面：深夜亮着的便利店招牌">
+              <defs><linearGradient id="xjbS1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2238"/><stop offset="1" stop-color="#41506f"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbS1)"/>
+              <rect x="0" y="250" width="640" height="110" fill="#16203a"/>
+              <rect x="200" y="120" width="240" height="130" rx="8" fill="#e8eef7"/>
+              <rect x="216" y="136" width="208" height="70" fill="#bcd3e6"/>
+              <rect x="216" y="214" width="208" height="36" fill="#ff6a3d" opacity=".85"/>
+              <text x="320" y="240" font-size="22" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold">24H</text>
+              <g fill="#ffe3b3" opacity=".8"><rect x="60" y="290" width="10" height="12"/><rect x="90" y="290" width="10" height="12"/><rect x="520" y="290" width="10" height="12"/></g>
+            </svg>
+            <span class="xjb-cover-label">城市观察</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">06:31</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">街角便利店：凌晨还亮着的那块招牌</h3>
+            <p class="xjb-video-summary">观察夜间店员与顾客之间的短暂交集，记录城市里最日常的温暖。</p>
+            <div class="xjb-video-meta"><span class="xjb-ava" style="background:#2f6b80;">城</span><span>城市切片</span></div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="986"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>986</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="街角便利店">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xjb-video-card" data-tag="教程" data-keywords="教程干货 手机 运镜 剪辑 技巧">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="作品《手机也能拍出电影感运镜》封面：手机与取景框示意图">
+              <defs><linearGradient id="xjbS2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2f3f"/><stop offset="1" stop-color="#1f8f8a"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbS2)"/>
+              <rect x="230" y="60" width="180" height="240" rx="22" fill="#0c1a22" stroke="#7fe3d8" stroke-width="3"/>
+              <rect x="248" y="88" width="144" height="150" rx="8" fill="#3aa79f" opacity=".85"/>
+              <circle cx="320" cy="266" r="14" fill="#0c1a22" stroke="#7fe3d8" stroke-width="3"/>
+              <g stroke="#ffffff" stroke-width="2.5" opacity=".8" fill="none">
+                <path d="M90 90 h40 v40"/><path d="M550 90 h-40 v40"/>
+                <path d="M90 270 h40 v-40"/><path d="M550 270 h-40 v-40"/>
+              </g>
+            </svg>
+            <span class="xjb-cover-label">教程干货</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">09:54</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">手机也能拍出电影感运镜：五个基础动作拆解</h3>
+            <p class="xjb-video-summary">从推、拉、摇、移到跟拍，逐条演示并说明适用场景与常见错误。</p>
+            <div class="xjb-video-meta"><span class="xjb-ava" style="background:#1f8f8a;">镜</span><span>镜头研究所</span></div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="2214"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>2,214</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="手机也能拍出电影感运镜">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xjb-video-card" data-tag="生活" data-keywords="生活方式 咖啡 手冲 独处 早晨">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="作品《一个人的手冲咖啡》封面：手冲滤杯与热气">
+              <defs><linearGradient id="xjbS3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a5a48"/><stop offset="1" stop-color="#d9b28a"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbS3)"/>
+              <rect x="0" y="262" width="640" height="98" fill="#6b4a37"/>
+              <path d="M230 150 L410 150 L370 236 L270 236Z" fill="#f4e8dc"/>
+              <rect x="268" y="236" width="104" height="26" rx="6" fill="#e8d4bf"/>
+              <path d="M250 100 q40 -30 80 0 q40 -30 80 0" stroke="#fff" stroke-width="3" fill="none" opacity=".65"/>
+              <ellipse cx="320" cy="300" rx="110" ry="16" fill="#4e3527" opacity=".55"/>
+              <g stroke="#f0d6b4" stroke-width="3" opacity=".7"><path d="M120 180 v70"/><path d="M520 160 v90"/></g>
+            </svg>
+            <span class="xjb-cover-label">生活方式</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">04:47</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">一个人的手冲咖啡：把早晨过慢一点</h3>
+            <p class="xjb-video-summary">没有讲解，没有配乐，只有水声与呼吸，记录十五分钟的独处时间。</p>
+            <div class="xjb-video-meta"><span class="xjb-ava" style="background:#c98a5b;">慢</span><span>慢速生活</span></div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="1533"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>1,533</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="一个人的手冲咖啡">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xjb-video-card" data-tag="纪实" data-keywords="人物纪实 返乡 青年 家乡 选择">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="作品《返乡青年》封面：田野尽头的老屋与人影">
+              <defs><linearGradient id="xjbS4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb6a8"/><stop offset="1" stop-color="#e8e2c8"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbS4)"/>
+              <path d="M0 250 Q160 210 320 250 T640 244 V360 H0Z" fill="#6f9163"/>
+              <path d="M0 292 Q180 262 340 292 T640 286 V360 H0Z" fill="#4e6f45"/>
+              <rect x="400" y="170" width="140" height="96" fill="#8a6a4e"/>
+              <path d="M388 172 L470 124 L552 172Z" fill="#5d4535"/>
+              <rect x="450" y="214" width="34" height="52" fill="#3d2f24"/>
+              <g fill="#2f3f2c"><ellipse cx="150" cy="252" rx="26" ry="9"/><rect x="140" y="212" width="20" height="40" rx="8"/><circle cx="150" cy="200" r="12"/></g>
+            </svg>
+            <span class="xjb-cover-label">人物纪实</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">11:20</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">返乡青年：在老家重新开始的一年</h3>
+            <p class="xjb-video-summary">三位年轻人讲述回到小城后的工作、关系与自我怀疑，真实、不修饰。</p>
+            <div class="xjb-video-meta"><span class="xjb-ava" style="background:#5c7a52;">纪</span><span>纪实频道</span></div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="3051"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>3,051</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="返乡青年">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xjb-video-card" data-tag="故事" data-keywords="故事短片 雨夜 重逢 剧情 叙事">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="剧情短片《雨夜重逢》封面：雨中的公交站台与两把伞">
+              <defs><linearGradient id="xjbS5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26334f"/><stop offset="1" stop-color="#4b5f82"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbS5)"/>
+              <g stroke="#9fb6d8" stroke-width="2" opacity=".55">
+                <path d="M60 30 L40 90"/><path d="M160 10 L140 80"/><path d="M300 20 L280 90"/>
+                <path d="M440 10 L420 80"/><path d="M560 24 L540 94"/><path d="M220 40 L200 100"/>
+              </g>
+              <rect x="0" y="290" width="640" height="70" fill="#1a2338"/>
+              <rect x="150" y="150" width="200" height="140" fill="#32405e"/>
+              <rect x="170" y="170" width="160" height="40" fill="#ffd9a8" opacity=".7"/>
+              <g fill="none" stroke="#0f1728" stroke-width="5">
+                <path d="M420 220 q30 -46 60 0Z"/><path d="M420 220 v70"/>
+                <path d="M480 236 q26 -40 52 0Z"/><path d="M480 236 v54"/>
+              </g>
+            </svg>
+            <span class="xjb-cover-label">剧情短片</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">10:12</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">雨夜重逢：两个十年没见的人站在同一把伞下</h3>
+            <p class="xjb-video-summary">极简场景与克制台词，用一场雨完成一次和解，情绪分寸拿捏得当。</p>
+            <div class="xjb-video-meta"><span class="xjb-ava" style="background:#4b5f82;">雨</span><span>雨棚计划</span></div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="1765"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>1,765</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="雨夜重逢">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="xjb-video-card" data-tag="生活" data-keywords="生活方式 猫 萌宠 日常 陪伴">
+          <div class="xjb-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="作品《它在窗台等了三年》封面：窗台上的橘猫与阳光">
+              <defs><linearGradient id="xjbS6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe6c7"/><stop offset="1" stop-color="#f2b47e"/></linearGradient></defs>
+              <rect width="640" height="360" fill="url(#xjbS6)"/>
+              <rect x="180" y="40" width="280" height="240" rx="10" fill="#fff6ea"/>
+              <rect x="200" y="60" width="240" height="180" fill="#bfe3f0"/>
+              <g stroke="#fff" stroke-width="3" opacity=".7"><path d="M200 120 H440"/><path d="M320 60 V240"/></g>
+              <ellipse cx="330" cy="270" rx="70" ry="34" fill="#e08a45"/>
+              <circle cx="300" cy="240" r="30" fill="#e08a45"/>
+              <path d="M278 218 L286 198 L298 216Z" fill="#e08a45"/><path d="M314 216 L326 198 L332 220Z" fill="#e08a45"/>
+              <circle cx="290" cy="240" r="4" fill="#4a3220"/><circle cx="310" cy="240" r="4" fill="#4a3220"/>
+              <path d="M300 252 q6 6 12 0" stroke="#4a3220" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="xjb-cover-label">生活方式</span>
+            <span class="xjb-play"><i></i></span>
+            <span class="xjb-cover-dur">03:58</span>
+          </div>
+          <div class="xjb-video-body">
+            <h3 class="xjb-video-title">它在窗台等了三年：一只猫和一个搬家的人</h3>
+            <p class="xjb-video-summary">温柔的生活片段，关于陪伴、习惯与说不出口的牵挂。</p>
+            <div class="xjb-video-meta"><span class="xjb-ava" style="background:#e08a45;">猫</span><span>毛球日记</span></div>
+            <div class="xjb-video-foot">
+              <button class="xjb-act xjb-like" data-like="4218"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4v-9h3zm3 9h7.5a2 2 0 001.96-1.6l1.3-6.4A2 2 0 0018.8 9H14V6a2 2 0 00-2-2l-2 7v9z"/></svg><span>4,218</span></button>
+              <button class="xjb-act xjb-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v17l-6-4-6 4V4z"/></svg><span>收藏</span></button>
+              <button class="xjb-act xjb-comment" data-title="它在窗台等了三年">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="xjb-no-result" id="xjb-no-result">没有找到匹配的作品，换个关键词试试，比如“城市”“教程”或“故事”。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="xjb-section xjb-section-alt" id="xjb-creators">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow">Creators</span>
+        <h2 class="xjb-h2">创作者矩阵 · 长期主义者的作品序列</h2>
+        <p>他们来自不同背景，但都对影像保持耐心。点击可查看创作者档案。</p>
+      </div>
+
+      <div class="xjb-creator-grid">
+        <article class="xjb-creator">
+          <div class="xjb-creator-top">
+            <span class="xjb-ava-lg" style="background:linear-gradient(135deg,#ff6a3d,#ffb59d);">周</span>
+            <div>
+              <div class="xjb-creator-name">周记影像</div>
+              <div class="xjb-creator-field">人物纪实 / 品牌自制</div>
+            </div>
+          </div>
+          <p class="xjb-creator-bio">前新闻摄影记者，擅长用长镜头记录普通人的一天。作品节奏缓慢但信息密度高，强调被拍摄者的尊严。</p>
+          <div class="xjb-creator-stats">
+            <div><b>86</b>作品</div><div><b>32.4万</b>关注</div><div><b>4.9</b>口碑</div>
+          </div>
+          <button class="xjb-creator-btn" data-creator="周记影像|前新闻摄影记者，专注人物纪实与城市观察，代表作品《凌晨四点的早餐铺》《守夜人》。">查看档案</button>
+        </article>
+
+        <article class="xjb-creator">
+          <div class="xjb-creator-top">
+            <span class="xjb-ava-lg" style="background:linear-gradient(135deg,#1f8f8a,#7fe3d8);">镜</span>
+            <div>
+              <div class="xjb-creator-name">镜头研究所</div>
+              <div class="xjb-creator-field">教程干货 / 器材测评</div>
+            </div>
+          </div>
+          <p class="xjb-creator-bio">由两位影视工业从业者组成的技术向团队，专注把复杂的拍摄知识拆成可执行步骤，教程完播率长期靠前。</p>
+          <div class="xjb-creator-stats">
+            <div><b>132</b>作品</div><div><b>45.1万</b>关注</div><div><b>4.8</b>口碑</div>
+          </div>
+          <button class="xjb-creator-btn" data-creator="镜头研究所|影视工业从业者组成的技术团队，擅长运镜拆解、灯光布景与后期流程教学。">查看档案</button>
+        </article>
+
+        <article class="xjb-creator">
+          <div class="xjb-creator-top">
+            <span class="xjb-ava-lg" style="background:linear-gradient(135deg,#7c6cf0,#c3b8ff);">叙</span>
+            <div>
+              <div class="xjb-creator-name">叙事实验室</div>
+              <div class="xjb-creator-field">剧情短片 / 编剧工作坊</div>
+            </div>
+          </div>
+          <p class="xjb-creator-bio">一群相信“短也能完整”的青年创作者，专注六到十二分钟的剧集化短片，擅长在极小场景里完成情绪转折。</p>
+          <div class="xjb-creator-stats">
+            <div><b>54</b>作品</div><div><b>28.7万</b>关注</div><div><b>4.7</b>口碑</div>
+          </div>
+          <button class="xjb-creator-btn" data-creator="叙事实验室|青年剧情短片团队，关注城市青年的情感与选择，定期举办编剧工作坊。">查看档案</button>
+        </article>
+
+        <article class="xjb-creator">
+          <div class="xjb-creator-top">
+            <span class="xjb-ava-lg" style="background:linear-gradient(135deg,#5c7a52,#a8c79b);">纪</span>
+            <div>
+              <div class="xjb-creator-name">纪实频道</div>
+              <div class="xjb-creator-field">社会观察 / 深度访谈</div>
+            </div>
+          </div>
+          <p class="xjb-creator-bio">关注区域流动、职业变化与家庭结构，作品常以系列形式出现，强调长期跟拍与资料核对。</p>
+          <div class="xjb-creator-stats">
+            <div><b>41</b>作品</div><div><b>19.6万</b>关注</div><div><b>4.9</b>口碑</div>
+          </div>
+          <button class="xjb-creator-btn" data-creator="纪实频道|长期关注社会变化的纪实团队，代表作《返乡青年》系列已更新至第三季。">查看档案</button>
+        </article>
+
+        <article class="xjb-creator">
+          <div class="xjb-creator-top">
+            <span class="xjb-ava-lg" style="background:linear-gradient(135deg,#c98a5b,#f0c9a3);">慢</span>
+            <div>
+              <div class="xjb-creator-name">慢速生活</div>
+              <div class="xjb-creator-field">生活方式 / 治愈影像</div>
+            </div>
+          </div>
+          <p class="xjb-creator-bio">用几乎没有解说的方式记录日常：泡一杯咖啡、整理一个抽屉。作品安静，评论区常被当作情绪树洞。</p>
+          <div class="xjb-creator-stats">
+            <div><b>97</b>作品</div><div><b>36.2万</b>关注</div><div><b>4.8</b>口碑</div>
+          </div>
+          <button class="xjb-creator-btn" data-creator="慢速生活|极简生活记录者，专注治愈影像与日常美学，作品以长镜头与自然声为主。">查看档案</button>
+        </article>
+
+        <article class="xjb-creator">
+          <div class="xjb-creator-top">
+            <span class="xjb-ava-lg" style="background:linear-gradient(135deg,#2f6b80,#8fd0e0);">城</span>
+            <div>
+              <div class="xjb-creator-name">城市切片</div>
+              <div class="xjb-creator-field">城市探索 / 在地文化</div>
+            </div>
+          </div>
+          <p class="xjb-creator-bio">走街串巷型创作者，偏爱老社区、旧市场与夜间街道，擅长用声音与细节建立空间记忆。</p>
+          <div class="xjb-creator-stats">
+            <div><b>73</b>作品</div><div><b>24.8万</b>关注</div><div><b>4.7</b>口碑</div>
+          </div>
+          <button class="xjb-creator-btn" data-creator="城市切片|城市探索创作者，专注老社区与夜间街道的影像记录，强调真实环境声。">查看档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 + 故事随笔 -->
+  <section class="xjb-section" id="xjb-topics">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow">Features</span>
+        <h2 class="xjb-h2">专题企划 · 围绕一个主题持续深挖</h2>
+        <p>专题是迅剧吧的内容组织方式，也是我们与创作者、合作方共同完成长期项目的载体。</p>
+      </div>
+
+      <div class="xjb-topic-grid">
+        <a class="xjb-topic" href="#xjb-stream">
+          <span class="xjb-topic-bg">
+            <svg viewBox="0 0 400 300" role="img" aria-label="专题《城市微光》封面：夜色中的街道灯火">
+              <defs><linearGradient id="xjbT1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2340"/><stop offset="1" stop-color="#3c4b7a"/></linearGradient></defs>
+              <rect width="400" height="300" fill="url(#xjbT1)"/>
+              <g fill="#ffcf8a" opacity=".85">
+                <circle cx="70" cy="200" r="8"/><circle cx="150" cy="180" r="8"/><circle cx="240" cy="210" r="8"/><circle cx="320" cy="170" r="8"/>
+              </g>
+              <path d="M0 250 Q100 220 200 250 T400 244 V300 H0Z" fill="#0e1424"/>
+            </svg>
+          </span>
+          <span class="xjb-topic-status">更新至第6集</span>
+          <span class="xjb-topic-title">城市微光</span>
+          <span class="xjb-topic-desc">记录夜间工作者的十二个切面，从便利店店员到末班公交司机。</span>
+        </a>
+
+        <a class="xjb-topic" href="#xjb-stream">
+          <span class="xjb-topic-bg">
+            <svg viewBox="0 0 400 300" role="img" aria-label="专题《手艺新生》封面：木作台与工具">
+              <defs><linearGradient id="xjbT2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b4a37"/><stop offset="1" stop-color="#c9a27a"/></linearGradient></defs>
+              <rect width="400" height="300" fill="url(#xjbT2)"/>
+              <rect x="60" y="170" width="280" height="20" rx="8" fill="#4a3324"/>
+              <rect x="110" y="110" width="18" height="60" fill="#e0b17a"/><rect x="160" y="90" width="18" height="80" fill="#e0b17a"/>
+              <circle cx="280" cy="140" r="34" fill="#f0d6b4"/>
+            </svg>
+          </span>
+          <span class="xjb-topic-status">筹备中 · 可预约提醒</span>
+          <span class="xjb-topic-title">手艺新生</span>
+          <span class="xjb-topic-desc">拜访仍在坚持的年轻手艺人，讨论传统技艺如何进入今天的生活。</span>
+        </a>
+
+        <a class="xjb-topic" href="#xjb-stream">
+          <span class="xjb-topic-bg">
+            <svg viewBox="0 0 400 300" role="img" aria-label="专题《一分钟实验》封面：胶片格与剪辑标记">
+              <defs><linearGradient id="xjbT3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f8f8a"/><stop offset="1" stop-color="#2f6b80"/></linearGradient></defs>
+              <rect width="400" height="300" fill="url(#xjbT3)"/>
+              <g fill="#0c1a22">
+                <rect x="60" y="60" width="80" height="60" rx="6"/><rect x="160" y="60" width="80" height="60" rx="6"/><rect x="260" y="60" width="80" height="60" rx="6"/>
+                <rect x="60" y="140" width="80" height="60" rx="6"/><rect x="160" y="140" width="80" height="60" rx="6"/><rect x="260" y="140" width="80" height="60" rx="6"/>
+              </g>
+              <path d="M100 250 L300 250" stroke="#7fe3d8" stroke-width="3"/>
+              <circle cx="200" cy="250" r="8" fill="#ff6a3d"/>
+            </svg>
+          </span>
+          <span class="xjb-topic-status">长期征集 · 每月评选</span>
+          <span class="xjb-topic-title">一分钟实验</span>
+          <span class="xjb-topic-desc">用一分钟讲清一件小事，考验表达精度，也欢迎第一次拍片的人。</span>
+        </a>
+
+        <a class="xjb-topic" href="#xjb-stream">
+          <span class="xjb-topic-bg">
+            <svg viewBox="0 0 400 300" role="img" aria-label="专题《对话之后》封面：两把椅子与暖光">
+              <defs><linearGradient id="xjbT4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d2a3f"/><stop offset="1" stop-color="#7a4d5f"/></linearGradient></defs>
+              <rect width="400" height="300" fill="url(#xjbT4)"/>
+              <circle cx="200" cy="90" r="40" fill="#ffcf8a" opacity=".75"/>
+              <rect x="110" y="170" width="52" height="80" rx="8" fill="#2a1d2c"/>
+              <rect x="238" y="170" width="52" height="80" rx="8" fill="#2a1d2c"/>
+              <path d="M0 268 H400" stroke="#ffb59d" stroke-width="3" opacity=".6"/>
+            </svg>
+          </span>
+          <span class="xjb-topic-status">已完结 · 全8期</span>
+          <span class="xjb-topic-title">对话之后</span>
+          <span class="xjb-topic-desc">八场长访谈，讨论创作、职业选择与普通人如何理解自己的生活。</span>
+        </a>
+      </div>
+
+      <div class="xjb-story-grid" style="margin-top:52px;">
+        <article class="xjb-story">
+          <h3>拍摄手记：我们在早餐铺门口站了七个小时</h3>
+          <p>为了不打扰摊主，团队把机器降到最低，只用一支定焦。真正难的从来不是设备，而是让对方在镜头前恢复自然的呼吸。这一条我们剪了十七版，最后留下的是最安静的那一版。</p>
+          <div class="xjb-story-author"><span class="xjb-ava" style="background:#ff6a3d;">周</span>周记影像 · 11月17日</div>
+        </article>
+        <article class="xjb-story">
+          <h3>关于“慢”的一次争论：要不要加配乐</h3>
+          <p>团队内部讨论了很久。加配乐更容易被算法推荐，但也可能替观众提前决定了情绪。最后我们选择保留环境声，把判断还给你。上线后收到的第一条长评说：谢谢你们没有催我。</p>
+          <div class="xjb-story-author"><span class="xjb-ava" style="background:#c98a5b;">慢</span>慢速生活 · 11月14日</div>
+        </article>
+        <article class="xjb-story">
+          <h3>创作者扶持计划第二期：我们想解决什么</h3>
+          <p>第一期里有太多人卡在“拍完不知道给谁看”。第二期我们增加了选题会与粗剪反馈，希望作品在发布前就获得一次认真的对话。报名通道已开放，截止到12月20日。</p>
+          <div class="xjb-story-author"><span class="xjb-ava" style="background:#1f8f8a;">运</span>迅剧吧运营团队 · 11月19日</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="xjb-section xjb-section-deep" id="xjb-reviews">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow" style="color:#ffb59d;">Voices</span>
+        <h2 class="xjb-h2" style="color:#fff;">社区声音 · 来自用户与合作伙伴的真实反馈</h2>
+        <p>我们保留不同语气的评价，因为它们共同构成一个品牌的真实口碑。</p>
+      </div>
+
+      <div class="xjb-review-grid">
+        <article class="xjb-review">
+          <div class="xjb-review-stars">★★★★★</div>
+          <p class="xjb-review-text">第一次在迅剧吧投稿就被编辑认真回复了，指出了三处节奏问题，还给了参考片单。这种反馈在别的平台很少见，会继续在这里发布作品。</p>
+          <div class="xjb-review-user"><span class="xjb-ava" style="background:#ff6a3d;">阿</span><div><b>阿野</b><div>独立创作者 · 入驻 8 个月</div></div></div>
+        </article>
+        <article class="xjb-review">
+          <div class="xjb-review-stars">★★★★★</div>
+          <p class="xjb-review-text">画质稳定，加载快，最重要的是内容不吵。晚上看一集《城市微光》已经成了习惯，像在听一个说话很稳的人讲故事。</p>
+          <div class="xjb-review-user"><span class="xjb-ava" style="background:#1f8f8a;">林</span><div><b>林小满</b><div>社区用户 · 关注 2 年</div></div></div>
+        </article>
+        <article class="xjb-review">
+          <div class="xjb-review-stars">★★★★☆</div>
+          <p class="xjb-review-text">专题策划做得很用心，每期都有清晰的问题意识，不是简单拼片单。希望后续能多一些幕后制作的拆解内容。</p>
+          <div class="xjb-review-user"><span class="xjb-ava" style="background:#7c6cf0;">陈</span><div><b>陈默</b><div>影视专业学生</div></div></div>
+        </article>
+        <article class="xjb-review">
+          <div class="xjb-review-stars">★★★★★</div>
+          <p class="xjb-review-text">我们品牌和迅剧吧合作过一支纪录短片，从脚本到成片的沟通都很专业，对方尊重我们的行业表达，也没有为了流量加奇怪的东西。</p>
+          <div class="xjb-review-user"><span class="xjb-ava" style="background:#c98a5b;">合</span><div><b>某生活方式品牌</b><div>内容合作方</div></div></div>
+        </article>
+        <article class="xjb-review">
+          <div class="xjb-review-stars">★★★★★</div>
+          <p class="xjb-review-text">评论区氛围好得有点意外。大家会认真讨论镜头和台词，也会分享自己的经历，不像在刷短视频，更像在一个小影院门口聊天。</p>
+          <div class="xjb-review-user"><span class="xjb-ava" style="background:#5c7a52;">木</span><div><b>木木</b><div>社区用户 · 关注 1 年</div></div></div>
+        </article>
+        <article class="xjb-review">
+          <div class="xjb-review-stars">★★★★☆</div>
+          <p class="xjb-review-text">希望移动端的筛选能再多一点维度，比如按时长。整体体验已经很好，投稿流程比想象中简单，审核也比较快。</p>
+          <div class="xjb-review-user"><span class="xjb-ava" style="background:#2f6b80;">周</span><div><b>周舟</b><div>新人创作者</div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="xjb-section xjb-section-alt" id="xjb-news">
+    <div class="xjb-container">
+      <div class="xjb-section-head">
+        <span class="xjb-eyebrow">Newsroom</span>
+        <h2 class="xjb-h2">企业动态 · 官方发布与内容更新</h2>
+        <p>品牌运营、内容上线、社区规则调整，都会在这里同步。</p>
+      </div>
+
+      <div style="display:grid;gap:14px;max-width:900px;">
+        <div class="xjb-about-card" style="display:flex;gap:18px;align-items:flex-start;">
+          <span class="xjb-tag xjb-tag-accent" style="flex:none;">11-19</span>
+          <div>
+            <h3 style="font-size:.98rem;font-weight:800;margin-bottom:6px;">创作者扶持计划第二期开放报名</h3>
+            <p style="font-size:.86rem;color:var(--xj-mute);">面向剧情短片、人物纪实与城市观察三个方向，提供策划支持、拍摄资源与分发保障，报名截止12月20日。</p>
+          </div>
+        </div>
+        <div class="xjb-about-card" style="display:grid;grid-template-columns:auto 1fr;gap:18px;">
+          <span class="xjb-tag xjb-tag-teal" style="flex:none;">11-17</span>
+          <div>
+            <h3 style="font-size:.98rem;font-weight:800;margin-bottom:6px;">秋冬影像企划《城市微光》更新至第6集</h3>
+            <p style="font-size:.86rem;color:var(--xj-mute);">本集聚焦末班公交司机，拍摄周期11天，全程跟车记录。专题页已同步更新幕后手记与创作谈。</p>
+          </div>
+        </div>
+        <div class="xjb-about-card" style="display:grid;grid-template-columns:auto 1fr;gap:18px;">
+          <span class="xjb-tag" style="flex:none;">11-12</span>
+          <div>
+            <h3 style="font-size:.98rem;font-weight:800;margin-bottom:6px;">投稿规范升级：明确素材授权与隐私保护要求</h3>
+            <p style="font-size:.86rem;color:var(--xj-mute);">新版规范要求提交拍摄对象授权说明，并对未成年人影像作出更严格的保护要求，详情见帮助中心。</p>
+          </div>
+        </div>
+        <div class="xjb-about-card" style="display:grid;grid-template-columns:auto 1fr;gap:18px;">
+          <span class="xjb-tag" style="flex:none;">11-05</span>
+          <div>
+            <h3 style="font-size:.98rem;font-weight:800;margin-bottom:6px;">迅剧吧与三家在地文化机构达成内容合作</h3>
+            <p style="font-size:.86rem;color:var(--xj-mute);">合作将围绕地方口述史与手艺记录展开，首批联合选题已进入前期调研阶段，预计明年一季度上线。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="xjb-section" id="xjb-faq">
+    <div class="xjb-container">
+      <div class="xjb-section-head" style="text-align:center;margin-left:auto;margin-right:auto;">
+        <span class="xjb-eyebrow" style="justify-content:center;">FAQ</span>
+        <h2 class="xjb-h2">常见问题 · 关于品牌、内容与投稿</h2>
+        <p>如果没有找到答案，可以通过页面底部的联系入口与我们沟通。</p>
+      </div>
+
+      <div class="xjb-faq-list">
+        <details class="xjb-faq-item">
+          <summary>迅剧吧是一个什么样的视频平台？</summary>
+          <div class="xjb-faq-body">迅剧吧是一家以原创影像为核心的视频品牌与内容社区，主要呈现剧集化短片、人物纪实、城市观察与生活方式内容。我们强调完整叙事与画质标准，也重视创作者与观众之间的真实交流。</div>
+        </details>
+        <details class="xjb-faq-item">
+          <summary>如何向迅剧吧投稿自己的作品？</summary>
+          <div class="xjb-faq-body">点击页面中的“我要投稿”按钮填写作品信息与素材授权说明，审核团队会在五个工作日内反馈。首次投稿建议先阅读帮助中心里的投稿规范与画质要求，能够显著提升通过率。</div>
+        </details>
+        <details class="xjb-faq-item">
+          <summary>平台对作品画质和格式有什么要求？</summary>
+          <div class="xjb-faq-body">建议提交 1080P 及以上清晰度的成片，画面比例支持 16:9 与竖屏 9:16。音频需无爆音与明显底噪，字幕建议内嵌或提供可编辑文件，以便后续统一呈现。</div>
+        </details>
+        <details class="xjb-faq-item">
+          <summary>创作者扶持计划需要什么条件？</summary>
+          <div class="xjb-faq-body">需要至少两部已完成作品，并有持续更新的意愿。我们更看重选题的真实性与表达的完成度，而非粉丝数量。入选后可以获得策划支持、拍摄资源对接与内容分发保障。</div>
+        </details>
+        <details class="xjb-faq-item">
+          <summary>品牌合作与商业内容如何对接？</summary>
+          <div class="xjb-faq-body">我们接受与品牌调性相符的影像合作，包括纪录短片、专题企划与系列内容。合作前会进行选题沟通与拍摄可行性评估，坚持真实表达与信息准确，不接虚假宣传类需求。</div>
+        </details>
+        <details class="xjb-faq-item">
+          <summary>为什么有些社区作品没有出现在推荐位？</summary>
+          <div class="xjb-faq-body">推荐位由编辑团队根据叙事完成度、画质与选题新鲜度综合评估。未进入推荐不等于作品不受欢迎，很多优质内容会在专题或标签页被持续分发。</div>
+        </details>
+        <details class="xjb-faq-item">
+          <summary>遇到内容或版权问题如何反馈？</summary>
+          <div class="xjb-faq-body">可以通过联系入口提交反馈，注明作品链接与具体问题。我们设有专门的处理流程，会在收到反馈后尽快核实并回复，对确认的问题会及时下架或修正。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系与分享 -->
+  <section class="xjb-section" id="xjb-contact" style="padding-top:20px;">
+    <div class="xjb-container">
+      <div class="xjb-cta">
+        <div>
+          <h2>把你的故事交给迅剧吧</h2>
+          <p>无论是投稿、合作还是反馈，我们都希望听到具体的声音。留下联系方式，运营团队会在两个工作日内与你沟通。也欢迎先浏览创作者档案，了解我们习惯的工作方式。</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;position:relative;">
+            <button class="xjb-btn xjb-btn-primary" id="xjb-submit-cta">提交投稿意向</button>
+            <button class="xjb-btn xjb-btn-ghost" id="xjb-feedback-btn" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.3);">问题反馈</button>
+          </div>
+        </div>
+        <div class="xjb-cta-actions">
+          <div class="xjb-cta-input">
+            <input type="email" id="xjb-email" placeholder="留下邮箱，获取官方动态" aria-label="订阅邮箱">
+            <button class="xjb-btn xjb-btn-primary" id="xjb-subscribe" style="padding:8px 16px;">订阅</button>
+          </div>
+          <p style="font-size:.78rem;color:#9aa4bf;position:relative;margin:0;">我们仅用于发送品牌资讯与内容更新，不对外提供。</p>
+          <button class="xjb-btn xjb-btn-ghost" id="xjb-copy-link" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.3);position:relative;">复制品牌页链接</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="xjb-footer">
+  <div class="xjb-container">
+    <div class="xjb-footer-grid">
+      <div>
+        <div class="xjb-footer-brand">
+          <span class="xjb-logo-mark" aria-hidden="true" style="width:34px;height:34px;border-radius:10px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 5.5L19 12L7 18.5V5.5Z" fill="#ff6a3d"/></svg>
+          </span>
+          <span class="xjb-logo-name">迅剧吧</span>
+        </div>
+        <p class="xjb-footer-desc">迅剧吧官方网站 · 原创影像品牌与内容社区。我们持续运营，专注剧集短片、人物纪实与城市观察，为创作者与企业搭建高品质内容生态。</p>
+        <div class="xjb-tag-row" style="margin-top:16px;">
+          <span class="xjb-tag" style="background:rgba(255,255,255,.08);color:#b8c2dc;">原创</span>
+          <span class="xjb-tag" style="background:rgba(255,255,255,.08);color:#b8c2dc;">正版</span>
+          <span class="xjb-tag" style="background:rgba(255,255,255,.08);color:#b8c2dc;">高清</span>
+          <span class="xjb-tag" style="background:rgba(255,255,255,.08);color:#b8c2dc;">持续运营</span>
+        </div>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#xjb-focus">焦点内容</a></li>
+          <li><a href="#xjb-stream">影像流</a></li>
+          <li><a href="#xjb-topics">专题企划</a></li>
+          <li><a href="#xjb-creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#xjb-about">品牌解析</a></li>
+          <li><a href="#xjb-news">企业动态</a></li>
+          <li><a href="#xjb-reviews">社区声音</a></li>
+          <li><a href="#xjb-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li>投稿与创作合作</li>
+          <li>品牌与商业合作</li>
+          <li>版权与内容反馈</li>
+          <li><a href="#xjb-contact">进入联系入口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="xjb-footer-bottom">
+      <span>© 2019–2026 迅剧吧 版权所有 · 官方网站 · 持续运营中</span>
+      <span>内容审核与版权保护机制长期有效 · 用户至上 · 值得信赖</span>
+    </div>
+  </div>
+</footer>
+
+<button class="xjb-top-btn" id="xjb-top-btn" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="xjb-toast" id="xjb-toast">已复制链接</div>
+
+<div class="xjb-modal-mask" id="xjb-modal-mask">
+  <div class="xjb-modal xjb-modal-wrap">
+    <button class="xjb-modal-close" id="xjb-modal-close" aria-label="关闭弹窗">×</button>
+    <div id="xjb-modal-content"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var prefix = "xjb";
+
+  /* Toast */
+  var toastEl = document.getElementById(prefix + "-toast");
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("is-show"); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById(prefix + "-burger");
+  var nav = document.getElementById(prefix + "-nav");
+  burger.addEventListener("click", function(){
+    var open = nav.classList.toggle("is-open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.addEventListener("click", function(e){
+    if(e.target.closest(".xjb-nav-link")){
+      nav.classList.remove("is-open");
+      burger.setAttribute("aria-expanded","false");
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById(prefix + "-search-input");
+  var searchBtn = document.getElementById(prefix + "-search-btn");
+  var streamCards = Array.prototype.slice.call(document.querySelectorAll("#" + prefix + "-stream-grid .xjb-video-card"));
+  var noResult = document.getElementById(prefix + "-no-result");
+
+  function doSearch(){
+    var q = (searchInput.value || "").trim();
+    if(!q){
+      showToast("请输入作品名、创作者或话题关键词");
+      return;
+    }
+    var hit = 0;
+    streamCards.forEach(function(card){
+      var text = (card.getAttribute("data-keywords") || "") + " " + card.textContent;
+      var match = text.indexOf(q) > -1;
+      card.style.display = match ? "" : "none";
+      if(match) hit++;
+    });
+    if(hit === 0){
+      noResult.style.display = "block";
+      showToast("未找到“" + q + "”，已为你展示附近题材");
+    }else{
+      noResult.style.display = "none";
+      showToast("找到 " + hit + " 部与“" + q + "”相关的内容");
+      document.getElementById(prefix + "-stream").scrollIntoView({behavior:"smooth"});
+    }
+  }
+  searchBtn.addEventListener("click", doSearch);
+  searchInput.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 标签筛选 */
+  var filters = document.querySelectorAll(".xjb-filter");
+  filters.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      filters.forEach(function(b){ b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+      var tag = btn.getAttribute("data-filter");
+      var count = 0;
+      streamCards.forEach(function(card){
+        var show = tag === "all" || card.getAttribute("data-tag") === tag;
+        card.style.display = show ? "" : "none";
+        if(show) count++;
+      });
+      noResult.style.display = count === 0 ? "block" : "none";
+    });
+  });
+
+  /* 点赞 */
+  document.querySelectorAll(".xjb-like").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var base = parseInt(btn.getAttribute("data-like") || "0", 10);
+      var liked = btn.classList.toggle("is-liked");
+      var num = liked ? base + 1 : base;
+      btn.querySelector("span").textContent = num.toLocaleString("en-US");
+      showToast(liked ? "已点赞，感谢你的支持" : "已取消点赞");
+    });
+  });
+
+  /* 收藏 */
+  document.querySelectorAll(".xjb-save").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var saved = btn.classList.toggle("is-saved");
+      btn.querySelector("span").textContent = saved ? "已收藏" : "收藏";
+      showToast(saved ? "已加入收藏夹" : "已取消收藏");
+    });
+  });
+
+  /* 弹窗工具 */
+  var mask = document.getElementById(prefix + "-modal-mask");
+  var modalContent = document.getElementById(prefix + "-modal-content");
+  function openModal(html){
+    modalContent.innerHTML = html;
+    mask.classList.add("is-show");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal(){
+    mask.classList.remove("is-show");
+    document.body.style.overflow = "";
+  }
+  document.getElementById(prefix + "-modal-close").addEventListener("click", closeModal);
+  mask.addEventListener("click", function(e){ if(e.target === mask) closeModal(); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeModal(); });
+
+  /* 评论弹窗 */
+  document.querySelectorAll(".xjb-comment").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var title = btn.getAttribute("data-title") || "该作品";
+      openModal(
+        '<h3>参与讨论</h3>' +
+        '<p class="xjb-modal-sub">正在评论《' + title + '》 · 友善表达会被更多人看见</p>' +
+        '<div class="xjb-form-field"><label>你的昵称</label><input type="text" placeholder="如何称呼你" id="xjb-cmt-name"></div>' +
+        '<div class="xjb-form-field"><label>评论内容</label><textarea rows="4" placeholder="说说你的观看感受" id="xjb-cmt-text"></textarea></div>' +
+        '<div class="xjb-modal-actions">' +
+        '<button class="xjb-btn xjb-btn-primary" id="xjb-cmt-send">发布评论</button>' +
+        '<button class="xjb-btn xjb-btn-ghost" data-close="1">取消</button></div>'
+      );
+      var send = document.getElementById("xjb-cmt-send");
+      send.addEventListener("click", function(){
+        var name = document.getElementById("xjb-cmt-name").value.trim();
+        var text = document.getElementById("xjb-cmt-text").value.trim();
+        if(!name || !text){ showToast("昵称与评论内容都需要填写"); return; }
+        closeModal();
+        showToast("评论已提交，审核后展示");
+      });
+      bindCloseBtn();
+    });
+  });
+
+  /* 创作者档案 */
+  document.querySelectorAll(".xjb-creator-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var raw = btn.getAttribute("data-creator") || "";
+      var parts = raw.split("|");
+      var name = parts[0] || "创作者";
+      var desc = parts[1] || "该创作者暂无更多介绍。";
+      openModal(
+        '<h3>' + name + '</h3>' +
+        '<p class="xjb-modal-sub">迅剧吧入驻创作者 · 作品经平台审核</p>' +
+        '<p style="font-size:.9rem;color:#3a4055;line-height:1.8;">' + desc + '</p>' +
+        '<p style="font-size:.85rem;color:#6b7285;line-height:1.8;margin-top:10px;">关注后可在更新时收到提醒。我们鼓励创作者保持稳定输出，也欢迎观众在评论区给出具体反馈。</p>' +
+        '<div class="xjb-modal-actions">' +
+        '<button class="xjb-btn xjb-btn-primary" id="xjb-follow-btn">关注创作者</button>' +
+        '<button class="xjb-btn xjb-btn-ghost" data-close="1">关闭</button></div>'
+      );
+      var follow = document.getElementById("xjb-follow-btn");
+      follow.addEventListener("click", function(){
+        follow.textContent = "已关注";
+        follow.classList.remove("xjb-btn-primary");
+        follow.classList.add("xjb-btn-dark");
+        showToast("已关注 " + name);
+      });
+      bindCloseBtn();
+    });
+  });
+
+  /* 投稿弹窗 */
+  function openSubmit(){
+    openModal(
+      '<h3>提交投稿意向</h3>' +
+      '<p class="xjb-modal-sub">请填写基本信息，运营团队会在两个工作日内联系你</p>' +
+      '<div class="xjb-form-field"><label>创作者名称</label><input type="text" id="xjb-sub-name" placeholder="署名或团队名"></div>' +
+      '<div class="xjb-form-field"><label>作品方向</label><input type="text" id="xjb-sub-topic" placeholder="如 人物纪实 / 剧情短片 / 城市观察"></div>' +
+      '<div class="xjb-form-field"><label>联系方式</label><input type="text" id="xjb-sub-contact" placeholder="邮箱或常用社交账号"></div>' +
+      '<div class="xjb-form-field"><label>作品简述</label><textarea rows="3" id="xjb-sub-desc" placeholder="一两句话说明作品内容与拍摄周期"></textarea></div>' +
+      '<div class="xjb-modal-actions">' +
+      '<button class="xjb-btn xjb-btn-primary" id="xjb-sub-send">提交</button>' +
+      '<button class="xjb-btn xjb-btn-ghost" data-close="1">取消</button></div>'
+    );
+    document.getElementById("xjb-sub-send").addEventListener("click", function(){
+      var name = document.getElementById("xjb-sub-name").value.trim();
+      var contact = document.getElementById("xjb-sub-contact").value.trim();
+      if(!name || !contact){ showToast("请填写创作者名称与联系方式"); return; }
+      closeModal();
+      showToast("投稿意向已收到，我们会尽快联系你");
+    });
+    bindCloseBtn();
+  }
+  document.getElementById(prefix + "-submit-top").addEventListener("click", openSubmit);
+  document.getElementById(prefix + "-submit-cta").addEventListener("click", openSubmit);
+
+  /* 反馈弹窗 */
+  document.getElementById(prefix + "-feedback-btn").addEventListener("click", function(){
+    openModal(
+      '<h3>问题反馈</h3>' +
+      '<p class="xjb-modal-sub">内容、版权或体验问题，都可以在这里提交</p>' +
+      '<div class="xjb-form-field"><label>问题类型</label><input type="text" id="xjb-fb-type" placeholder="如 播放异常 / 内容纠错 / 版权问题"></div>' +
+      '<div class="xjb-form-field"><label>问题描述</label><textarea rows="4" id="xjb-fb-text" placeholder="请尽量描述清楚，便于我们核实"></textarea></div>' +
+      '<div class="xjb-form-field"><label>联系方式（选填）</label><input type="text" id="xjb-fb-contact" placeholder="便于我们回复你"></div>' +
+      '<div class="xjb-modal-actions">' +
+      '<button class="xjb-btn xjb-btn-primary" id="xjb-fb-send">提交反馈</button>' +
+      '<button class="xjb-btn xjb-btn-ghost" data-close="1">取消</button></div>'
+    );
+    document.getElementById("xjb-fb-send").addEventListener("click", function(){
+      var text = document.getElementById("xjb-fb-text").value.trim();
+      if(!text){ showToast("请填写问题描述"); return; }
+      closeModal();
+      showToast("反馈已提交，感谢你的帮助");
+    });
+    bindCloseBtn();
+  });
+
+  function bindCloseBtn(){
+    modalContent.querySelectorAll('[data-close="1"]').forEach(function(b){
+      b.addEventListener("click", closeModal);
+    });
+  }
+
+  /* 订阅 */
+  document.getElementById(prefix + "-subscribe").addEventListener("click", function(){
+    var v = document.getElementById(prefix + "-email").value.trim();
+    if(!v || v.indexOf("@") < 1){
+      showToast("请填写有效的邮箱地址");
+      return;
+    }
+    showToast("订阅成功，官方动态将发送至你的邮箱");
+    document.getElementById(prefix + "-email").value = "";
+  });
+
+  /* 复制链接 */
+  function copyLink(){
+    var link = "https://www.xunjuba.com/";
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){
+        showToast("品牌页链接已复制");
+      }).catch(function(){
+        showToast("复制失败，请手动收藏本页");
+      });
+    }else{
+      var ta = document.createElement("textarea");
+      ta.value = link;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand("copy"); showToast("品牌页链接已复制"); }
+      catch(e){ showToast("复制失败，请手动收藏本页"); }
+      document.body.removeChild(ta);
+    }
+  }
+  document.getElementById(prefix + "-copy-link").addEventListener("click", copyLink);
+  document.getElementById(prefix + "-share-btn").addEventListener("click", copyLink);
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById(prefix + "-top-btn");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 520){ topBtn.classList.add("is-show"); }
+    else{ topBtn.classList.remove("is-show"); }
+  }, {passive:true});
+  topBtn.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  /* 数字滚动 */
+  var counted = false;
+  function runCount(){
+    if(counted) return;
+    counted = true;
+    document.querySelectorAll("[data-count]").forEach(function(el){
+      var target = parseInt(el.getAttribute("data-count"), 10);
+      var suffix = el.querySelector("small") ? el.querySelector("small").outerHTML : "";
+      var start = 0;
+      var dur = 1100;
+      var t0 = null;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+        el.innerHTML = val.toLocaleString("en-US") + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var hero = document.getElementById(prefix + "-home");
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCount(); });
+    }, {threshold:0.3});
+    io.observe(hero);
+  }else{
+    runCount();
+  }
+})();
+</script>
+</body>
+                                                                    </html>
